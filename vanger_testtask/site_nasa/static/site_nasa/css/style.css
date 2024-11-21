@@ -1,16 +1,109 @@
-.gallery-main-img {
-    width: 457px;
-    height: 457px;
-    object-fit: cover;
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #3C3C3C
+}
+.container {
+  max-width: 1440px;
+  width: 100%;  /* Обеспечивает адаптивность */
+  margin: 0 auto;  /* Центрирует контейнер */
 }
 
-.gallery-thumbnail {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    cursor: pointer;
+h1, h2, h3 {
+    font-weight: 700;
+    color: #0A121E; /* Устанавливаем основной цвет заголовков */
 }
 
-.galery {
-    background-color:#3C3C3C ;
+.block1 {
+    max-width: 751px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.block2 {
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+.block2 p {
+    margin-top: 15px;
+}
+
+.block3 {
+    text-align: center;
+    background-color: #3C3C3C;
+}
+
+.block3 h2 {
+    color: #ffffff;
+}
+
+
+.navbar {
+    padding: 1rem 1.5rem;
+}
+
+.navbar-brand img.logo {
+    max-height: 50px;
+    width: auto;
+}
+.navbar-toggler-icon {
+    display: none;
+}
+
+.custom-burger-icon {
+    width: 30px;
+    height: auto;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #FF342B;
+}
+
+/* Кнопка "Войти" */
+.btn-login {
+    padding: 0.5rem 1.5rem;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #e02c25;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        margin-right: 0;
+    }
+    .btn-login {
+        font-size: 10px;
+    }
+    .navbar-brand img.logo {
+    max-height: 20px;
+}
+
+    .navbar-brand {
+        margin-left: 0;
+    }
+
+    .d-lg-none {
+        display: block !important;
+    }
+
+    .d-lg-block {
+        display: none !important;
+    }
 }
