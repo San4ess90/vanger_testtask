@@ -1,0 +1,98 @@
+{% extends 'site_nasa/base.html' %}
+{% load static %}
+{% block title %}Главная страничка{% endblock %}
+
+{% block content %}
+    <!-- Меню -->
+    {% include 'site_nasa/main-menu.html' %}
+
+    <!-- Заголовок с текстом-описанием -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1>Заголовок сайта</h1>
+                <p>Это описание сайта. Здесь можно кратко рассказать о том, что на нем представлено, а также указать
+                    важную информацию для посетителей.</p>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="{% static 'site_nasa/images/fa6-solid_shuttle-space.png' %}" alt="">
+                            <p>Спейс шаттлы — пилотируемые корабли</p>
+                        </div>
+                        <div class="col-6">
+                            <img src="{% static 'site_nasa/images/ion_telescope.png' %}" alt="">
+                            <p>Лучшее телескопическое оборудование</p>
+                        </div>
+                        <div class="col-6">
+                            <img src="{% static 'site_nasa/images/bi_moon-stars-fill.png' %}" alt="">
+                            <p>Целимся на Луну и Марс</p>
+                        </div>
+                        <div class="col-6">
+                            <img src="{% static 'site_nasa/images/bxs_medal.png' %}" alt="">
+                            <p>Золотая медаль по научным исследованиям</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{% static 'site_nasa/images/photo_space.png' %}" alt="Картинка" class="img-fluid"
+                         style="max-width: 457px; max-height: 457px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок с галереей -->
+    <section class="galery">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="gallery">
+                        <img src="https://via.placeholder.com/457x457" alt="Основное изображение"
+                             class="gallery-main-img" id="main-img">
+                        <div class="d-flex justify-content-center mt-3">
+                            <div class="gallery-thumbnails">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 1" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 2" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 3" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 4" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 5" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 6" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 7" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 8" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 9" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                                <img src="https://via.placeholder.com/80x80" alt="Превью 10" class="gallery-thumbnail"
+                                     onclick="changeImage(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        function changeImage(imgElement) {
+            const mainImg = document.getElementById("main-img");
+            mainImg.src = imgElement.src;
+        }
+    </script>
+
+{% endblock %}
